@@ -1,6 +1,8 @@
 # Micromouse
 
-Micromouse is a robotics competition where small autonomous robots, known as micromice or mice, navigate through a maze to reach a designated target area. The Mouse Maze Solver is an intelligent algorithmic program designed specifically for micromouse competitions. It comprises two main components: the `Maze` class, responsible for representing the maze structure and its properties, and the `Mouse` class, an algorithmic entity utilizing the maze to solve navigation challenges.
+Micromouse is a robotics competition where universities design and build small, autonomous robots capable of navigating through intricate, unique mazes. The goal is to find the optimal path from a predetermined start point to the center (end) of the maze, all without human intervention. These miniature robots utilize various sensors and algorithms to explore and map the maze efficiently. The competition emphasizes both speed and accuracy, as Micromice race against the clock to complete the maze exploration and achieve the fastest possible start-to-end and back to start run.
+
+
 
 
 
@@ -8,17 +10,21 @@ Micromouse is a robotics competition where small autonomous robots, known as mic
 
 ## Overview
 
-The Mouse Maze Solver is an intelligent algorithmic program designed to navigate through a maze efficiently. The project comprises two main components: the `Maze` class, responsible for representing the maze structure and its properties, and the `Mouse` class, an algorithmic entity utilizing the maze to solve navigation challenges.
+The Maze Solver is an intelligent algorithmic program designed to navigate through a maze efficiently and thoroughly. The project comprises two main components: the `Maze` class, responsible for representing the maze mapping and its properties such as "explored" or "cost", and the `Mouse` class, an algorithmic entity utilizing the maze to make navigation decisions.
 
 ## Maze Class
 
 ### Design Highlights:
 
-- **Modular Structure:** The `Maze` class encapsulates the maze structure, separating concerns related to walls, boxes, and exploration status. This modular approach enhances maintainability and readability.
+- **FloodFill Functionality:** The Maze class is at the core of our Micromouse simulation, featuring advanced flood fill functionality that plays a crucial role in optimizing navigation. As the Micromouse explores the maze, the flood fill algorithm dynamically calculates the cost from any square to the destination, providing a comprehensive understanding of the optimal path. This method empowers the Micromouse to intelligently navigate the maze, strategically choosing the fastest route to the center.
 
-- **Accessor and Mutator Functions:** Well-defined accessor functions allow access to maze properties, while mutator functions facilitate dynamic updates, such as setting walls, exploring boxes, and modifying costs.
 
-- **FloodFill Functionality:** The class incorporates flood-fill algorithms for maze exploration. The `floodFill` function efficiently calculates the cost of reaching each box, aiding in pathfinding optimization.
+- **Adaptive Maze Representation:** The Maze class serves as the central data structure, dynamically updating and storing crucial information about the maze. It tracks the presence of walls, allowing the Micromouse to make informed decisions about its navigation path. The maze starts empty with no walls inside, but as the mouse continues to explore and find walls, the walls are placed within the maze, possibly changing the cost results of another floodfill. Additionally, the algorithm recalculates the cost associated with each box in the maze relative to the finish. The cost represents the amount of moves it would take to get from any given square to the end. Diagonal functionality will soon be implemented where a diagonal move will cost in between 1 and 2 moves. This adaptive representation ensures the Micromouse can efficiently explore and solve mazes of varying complexity.
+
+
+- **Exploration Tracking:** In addition to mapping out walls and calculating costs, the Maze class keeps track of which boxes have been explored. This information is vital for the Micromouse to understand when it has found the fastest possible path and can stop exploring. If the mouse calculates the fastest path, and it is one where all the squares have been explored, it is determined that the fastest path is one that exists and no further exploration is necessary.
+
+
 
 ## Mouse Class
 
@@ -28,13 +34,13 @@ The Mouse Maze Solver is an intelligent algorithmic program designed to navigate
 
 - **Sensor Integration:** The mouse employs sensors to detect walls in its surroundings. Sensor data is processed to make informed decisions during maze traversal, enhancing adaptability to different maze configurations.
 
-- **Dynamic Movement:** The mouse is designed to move dynamically based on its current direction and sensor input. This allows for responsive navigation, adapting to maze changes in real-time.
+- **Dynamic Movement:** The mouse is designed to move dynamically based on its current direction and sensor input. This allows for faster navigation.
 
-- **Dead-End Detection:** The mouse can identify dead-end situations, which can occur in two ways:
+- **Dead-End Detection:** The mouse can identify dead-end situations, which signifies that the mouse shouldn't continue its current route and should run FloodFill to get back on the fastest path. Dead-ends can have 2 meanings:
 
   - **Physical Trap:** The mouse recognizes a dead end when all adjacent boxes have walls, making further movement impossible. In this case, the mouse backtracks to explore alternative paths.
 
-  - **Higher Costs in Adjacent Squares:** A dead end is also detected when the costs of adjacent boxes are higher than the current box's cost. The mouse intelligently identifies such scenarios and adjusts its path to explore more promising routes.
+  - **Higher Costs in Adjacent Squares:** A dead end is also detected when the costs of adjacent boxes are higher than the current box's cost. This signifies that the mouse is no longer on the fastest route. The mouse intelligently identifies such scenarios and adjusts its path to explore more promising routes.
 
 ## Advantages of the Design:
 
@@ -44,9 +50,7 @@ The Mouse Maze Solver is an intelligent algorithmic program designed to navigate
 
 3. **Readable and Maintainable:** The codebase emphasizes readability and maintainability through descriptive function names, well-commented code, and a consistent coding style.
 
-4. **Adaptability:** The mouse's reliance on sensor data makes it adaptable to various maze configurations. It can navigate through mazes of different sizes and layouts.
-
-5. **Algorithmic Intelligence:** The mouse exhibits intelligent decision-making, such as identifying dead ends and choosing optimal paths, making it suitable for complex maze-solving scenarios.
+4. **Algorithmic Intelligence:** The mouse exhibits intelligent decision-making, such as identifying dead ends and choosing optimal paths, making it suitable for complex maze-solving scenarios.
 
 
 
