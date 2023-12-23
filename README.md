@@ -1,6 +1,6 @@
 # Micromouse
 
-Micromouse is a robotics competition where universities design and build small, autonomous robots capable of navigating through intricate, unique mazes. The goal is to find the optimal path from a predetermined start point to the center (end) of the maze, all without human intervention. These miniature robots utilize various sensors and algorithms to explore and map the maze efficiently. The competition emphasizes both speed and accuracy, as Micromice race against the clock to complete the maze exploration and achieve the fastest possible start-to-end and back to start run. Our first competition is in April, so many of these functions are still incomplete. 
+Micromouse is a robotics competition where universities design and build small, autonomous robots capable of navigating through intricate, unique mazes. The goal is to find the optimal path from a predetermined start point to the center/end of the maze, all without human intervention. These miniature robots utilize various sensors and algorithms to explore and map the maze efficiently. The competition emphasizes both speed and accuracy, as Micromice race against the clock to complete the maze exploration and achieve the fastest possible start-to-end and back to start run. Our first competition is in April, so many of these functions are still incomplete. 
 
 <br><br><br>
 
