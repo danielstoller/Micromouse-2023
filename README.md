@@ -2,15 +2,15 @@
 
 Micromouse is a robotics competition where universities design and build small, autonomous robots capable of navigating through intricate, unique mazes. The goal is to find the optimal path from a predetermined start point to the center (end) of the maze, all without human intervention. These miniature robots utilize various sensors and algorithms to explore and map the maze efficiently. The competition emphasizes both speed and accuracy, as Micromice race against the clock to complete the maze exploration and achieve the fastest possible start-to-end and back to start run. Our first competition is in April, so many of these functions are still incomplete. 
 
-
-
-
+<br><br><br>
 
 # Maze Solver
 
 ## Overview
 
 The Maze Solver is an intelligent algorithmic program designed to navigate through a maze efficiently and thoroughly. The project comprises two main components: the `Maze` class, responsible for representing the maze mapping and its properties such as "explored" or "cost", and the `Mouse` class, an algorithmic entity utilizing the maze to make navigation decisions.
+
+<br>
 
 ## Maze Class
 
@@ -24,7 +24,7 @@ The Maze Solver is an intelligent algorithmic program designed to navigate throu
 
 - **Exploration Tracking:** In addition to mapping out walls and calculating costs, the Maze class keeps track of which boxes have been explored. This information is vital for the Micromouse to understand when it has found the fastest possible path and can stop exploring. If the mouse calculates the fastest path, and it is one where all the squares have been explored, it is determined that the fastest path is one that exists and no further exploration is necessary.
 
-
+<br>
 
 ## Mouse Class
 
@@ -42,6 +42,8 @@ The Maze Solver is an intelligent algorithmic program designed to navigate throu
 
   - **Higher Costs in Adjacent Squares:** A dead end is also detected when the costs of adjacent boxes are higher than the current box's cost. This signifies that the mouse is no longer on the fastest route. The mouse intelligently identifies such scenarios and adjusts its path to explore more promising routes.
 
+<br>
+
 ## Advantages of the Design:
 
 1. **Modularity and Extensibility:** The modular design of the `Maze` class allows for easy extensions or modifications without affecting other components. New functionalities can be added without major disruptions.
@@ -54,12 +56,15 @@ The Maze Solver is an intelligent algorithmic program designed to navigate throu
 
 
 
+<br><br><br>
 
 # Maze Solver Simulation
 
 ## Overview
 
 The Micromouse Maze Solver Simulation is a tool designed to facilitate testing and visualization of the maze-solving algorithm developed for Micromouse robotics competitions. The simulation allows users to input custom maze configurations, including walls, and observe the algorithm's behavior in real-time. Key features include a visual representation of the maze, tracking the mouse's position, displaying explored areas, and highlighting the current best path.
+
+<br>
 
 ## Features
 
@@ -79,6 +84,8 @@ The Micromouse Maze Solver Simulation is a tool designed to facilitate testing a
    - Intuitive controls for maze configuration and simulation execution.
    - Easy-to-understand visual cues for the mouse's actions and the state of the maze.
 
+<br>
+
 ## Usage
 
 1. **Setting Up the Maze:**
@@ -92,6 +99,8 @@ The Micromouse Maze Solver Simulation is a tool designed to facilitate testing a
 3. **Analyzing Results:**
    - Assess the effectiveness of the maze-solving algorithm based on the visual feedback.
    - Make necessary adjustments to optimize navigation strategies.
+
+<br>
 
 ## Advantages
 
