@@ -7,7 +7,6 @@
 #ifndef MOUSE_HPP_
 #define MOUSE_HPP_
 
-#include "maze.hpp"
 #include "maze.cpp"
 
 #include <iostream>
