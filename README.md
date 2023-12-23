@@ -3,6 +3,7 @@
 Micromouse is a robotics competition where small autonomous robots, known as micromice or mice, navigate through a maze to reach a designated target area. The Mouse Maze Solver is an intelligent algorithmic program designed specifically for micromouse competitions. It comprises two main components: the `Maze` class, responsible for representing the maze structure and its properties, and the `Mouse` class, an algorithmic entity utilizing the maze to solve navigation challenges.
 
 
+
 # Maze Solver
 
 ## Overview
@@ -46,6 +47,8 @@ The Mouse Maze Solver is an intelligent algorithmic program designed to navigate
 4. **Adaptability:** The mouse's reliance on sensor data makes it adaptable to various maze configurations. It can navigate through mazes of different sizes and layouts.
 
 5. **Algorithmic Intelligence:** The mouse exhibits intelligent decision-making, such as identifying dead ends and choosing optimal paths, making it suitable for complex maze-solving scenarios.
+
+
 
 
 # Maze Solver Simulation
