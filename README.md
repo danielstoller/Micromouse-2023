@@ -1,6 +1,6 @@
 # Micromouse
 
-Micromouse is a robotics competition where universities design and build small, autonomous robots capable of navigating through intricate, unique mazes. The goal is to find the optimal path from a predetermined start point to the center (end) of the maze, all without human intervention. These miniature robots utilize various sensors and algorithms to explore and map the maze efficiently. The competition emphasizes both speed and accuracy, as Micromice race against the clock to complete the maze exploration and achieve the fastest possible start-to-end and back to start run.
+Micromouse is a robotics competition where universities design and build small, autonomous robots capable of navigating through intricate, unique mazes. The goal is to find the optimal path from a predetermined start point to the center (end) of the maze, all without human intervention. These miniature robots utilize various sensors and algorithms to explore and map the maze efficiently. The competition emphasizes both speed and accuracy, as Micromice race against the clock to complete the maze exploration and achieve the fastest possible start-to-end and back to start run. Our first competition is in April, so many of these functions are still incomplete. 
 
 
 
@@ -72,7 +72,7 @@ The Micromouse Maze Solver Simulation is a tool designed to facilitate testing a
    - Users can observe the mouse's movement, areas explored, and the evolving best path.
 
 3. **Algorithm Testing:**
-   - Enables thorough testing of the maze-solving algorithm under various conditions.
+   - Enables thorough testing of the maze-solving algorithm under controlled conditions.
    - Users can assess the algorithm's performance and make informed adjustments.
 
 4. **User-Friendly Interface:**
@@ -100,10 +100,9 @@ The Micromouse Maze Solver Simulation is a tool designed to facilitate testing a
   - Ideal for fine-tuning the algorithm before real-world implementation.
 
 - **Visual Debugging:**
-  - Real-time visualization aids in identifying potential issues or inefficiencies in the algorithm.
+  - Real-time visualization helps to identifying potential issues or inefficiencies in the algorithm.
   - Allows users to debug and optimize the solution visually.
 
 - **Scenario Exploration:**
   - Users can simulate various scenarios by adjusting maze configurations.
   - Evaluate how the algorithm responds to different maze layouts and challenges.
-
