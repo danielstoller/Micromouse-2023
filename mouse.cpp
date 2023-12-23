@@ -9,15 +9,12 @@
 ////--------------CONSTRUCTORS--------------////
 
 // Default constructor - setting all private variables to defaults
-Mouse::Mouse() {
-  direction = n;
+Mouse::Mouse() direction(n) {
   resetLocation();
 }
 
-Mouse::Mouse(Maze maze) {
-  direction = n;
+Mouse::Mouse(Maze maze) direction(n), m(maze) {
   resetLocation();
-  m = maze;
 }
 
 ////--------------ACCESSOR FUNCTIONS--------------///
@@ -25,7 +22,7 @@ Mouse::Mouse(Maze maze) {
 // @Returns the current direction of the Mouse
 dir Mouse::getDirection() { return direction; }
 
-dir numToDir(int8_t num) {
+dir Mouse::numToDir(int8_t num) {
 
   if (num < 0)
     num = 8 - num;
@@ -69,7 +66,7 @@ dir numToDir(int8_t num) {
   }
 }
 
-uint8_t dirToNum(const dir &d) {
+uint8_t Mouse::dirToNum(const dir &d) {
   switch (d) {
   // 0 = North
   case n:
