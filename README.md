@@ -24,8 +24,6 @@ The Maze Solver is an intelligent algorithmic program designed to navigate throu
 
 - **Exploration Tracking:** In addition to mapping out walls and calculating costs, the Maze class keeps track of which boxes have been explored. This information is vital for the Micromouse to understand when it has found the fastest possible path and can stop exploring. If the mouse calculates the fastest path, and it is one where all the squares have been explored, it is determined that the fastest path is one that exists and no further exploration is necessary.
 
-![Flood Fill](pictures/floodfill_after_deadend.jpg)
-
 <br>
 
 ## Mouse Class
@@ -57,6 +55,7 @@ The Maze Solver is an intelligent algorithmic program designed to navigate throu
 4. **Algorithmic Intelligence:** The mouse exhibits intelligent decision-making, such as identifying dead ends and choosing optimal paths, making it suitable for complex maze-solving scenarios.
 
 
+![Flood Fill](pictures/floodfill_after_deadend.jpg)
 
 <br><br><br>
 
